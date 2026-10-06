@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true  # draco only: its own submodules, Eigen on GitLab among them, serve the transcoder DracoPy does not build
 
       - name: Install OpenSSL
         if:  ${{ matrix.arch == 'aarch64' }}

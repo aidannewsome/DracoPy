@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true  # draco only: its own submodules, Eigen on GitLab among them, serve the transcoder DracoPy does not build
 
       - name: Build wheels
         uses: pypa/cibuildwheel@v4.2.0
